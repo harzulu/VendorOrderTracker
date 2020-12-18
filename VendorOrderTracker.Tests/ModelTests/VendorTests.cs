@@ -75,7 +75,7 @@ namespace VendorOrderTracker.Tests
       Vendor newVendor = new Vendor("name", "description");
       Vendor newVendorTwo = new Vendor("name", "description");
 
-      Assert.AreEqual(2, newVendor.Id);
+      Assert.AreEqual(1, newVendor.Id);
     }
   }
 }
