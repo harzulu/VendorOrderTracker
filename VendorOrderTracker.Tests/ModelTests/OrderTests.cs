@@ -46,7 +46,7 @@ namespace VendorOrderTracker.Tests
     {
       int price = 12;
 
-      Order newOrder = new Order("title", "description", 1, "date");
+      Order newOrder = new Order("title", "description", price, "date");
 
       Assert.AreEqual(price, newOrder.Price);
     }
