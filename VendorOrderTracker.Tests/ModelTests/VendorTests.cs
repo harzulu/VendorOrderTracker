@@ -49,7 +49,7 @@ namespace VendorOrderTracker.Tests
 
       newVendor.AddOrder(newOrder);
 
-      Assert.AreEqual(newOrder, newVendor.Orders[1]);
+      Assert.AreEqual(newOrder, newVendor.Orders[0]);
     }
   }
 }
