@@ -51,5 +51,22 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(newOrder, newVendor.Orders[0]);
     }
+
+    [TestMethod]
+    public void GetOrders_ReturnOrdersList_List()
+    {
+      Order newOrderOne = new Order("Title", "Description", 12, "Date");
+      Order newOrderTwo = new Order("Title", "Description", 12, "Date");
+      Order newOrderThree = new Order("Title", "Description", 12, "Date");
+
+      Vendor newVendor = new Vendor("name", "description");
+      List<Order> ordersList = new List<Order> {newOrderOne, newOrderTwo, newOrderThree};
+
+      newVendor.AddOrder(newOrderOne);
+      newVendor.AddOrder(newOrderTwo);
+      newVendor.AddOrder(newOrderThree);
+
+      CollectionAssert.AreEqual(ordersList, newVendor.Name);
+    }
   }
 }
