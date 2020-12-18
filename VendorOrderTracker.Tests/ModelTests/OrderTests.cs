@@ -78,7 +78,16 @@ namespace VendorOrderTracker.Tests
     {
       Order newOrder = new Order("title", "description", 12, "date");
 
-      Assert.AreEqual(10, newOrder.Id);
+      Assert.AreEqual(1, newOrder.Id);
+    }
+
+    [TestMethod]
+    public void FindOrder_GetOrderFromIdNumber_Order()
+    {
+      Order newOrderOne = new Order("titleOne", "description", 12, "date");
+      Order newOrderTwo = new Order("titleTwo", "description", 12, "date");
+
+      Assert.AreEqual(newOrderTwo, Order.Find(1));
     }
   }
 }
