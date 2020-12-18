@@ -50,5 +50,15 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(price, newOrder.Price);
     }
+
+    [TestMethod]
+    public void GetDate_ReturnGivenDate_String()
+    {
+      string testDate = "December 18 2020";
+
+      Order newOrder = new Order("title", "description", 12, "testDate");
+
+      Assert.AreEqual(testDate, newOrder.Date);
+    }
   }
 }
