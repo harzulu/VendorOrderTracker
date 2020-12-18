@@ -65,6 +65,7 @@ This application will allow Pierre to track all of his vendors and all of their 
 | **Return given description** | "vendor description" | "vendor description" |
 | **Add Order to order list** | `newVendor.AddOrder(Order)` | newVendor.Orders[0] = Order |
 | **Get Order list** | `Vendor.Orders` | {Order, Order} |
+| **Get all instances of Vendor** | `Vendor.GetAll()` | {Vendor, Vendor} |
 | **Get Id of Vendor** | vendorInstance.Id | `2` |
 | **Find Vendor by Id** | `Vendor.Find(2)` | `Vendor` |
 
@@ -122,6 +123,10 @@ Expect: Assert.AreEqual(Order, newVendor.Orders[0])
 Describe: GetOrders()
 Test: Get Order list
 Expect: Assert.AreEqual({Order, Order}, newVendor.GetOrders())
+
+Describe: GetAll()
+Test: Get all instances of Vendor
+Expect: Assert.AreEqual({Vednor, Vendor}, newVendor.GetAll())
 
 Describe: VendorGetId()
 Test: Get Id of Vendor

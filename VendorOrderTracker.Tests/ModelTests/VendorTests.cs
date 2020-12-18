@@ -70,6 +70,17 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
+    public void GetAll_ReturnAllInstancesOfVendor_List()
+    {
+      Vendor newVendor = new Vendor("name", "description");
+      Vendor newVendorTwo = new Vendor("name", "description");
+
+      List<Vendor> vendorList = new List<Vendor> {newVendor};//, newVendorTwo};
+
+      CollectionAssert.AreEqual(vendorList, Vendor.GetAll());
+    }
+
+    [TestMethod]
     public void GetId_ReturnIdOfVendor_Int()
     {
       Vendor newVendor = new Vendor("name", "description");
