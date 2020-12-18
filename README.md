@@ -52,14 +52,84 @@ This application will allow Pierre to track all of his vendors and all of their 
 
 | Spec                                            | Input                        | Output                        |
 | :---------------------------------------------- | :--------------------------- | :---------------------------- |
-|  |  |  |
+| **Can make an instance of Order object** | `new Order()` | typeof(Order) = Order |
+| **Return given title** | "orderOne" | "orderOne" |
+| **Return given description** | "order description" | "order description" |
+| **Return given price** | `12` | `12` |
+| **Return given date** | "December 18 2020" | "December 18 2020" |
+| **Get all instances of Order** | `Order.GetAll()` | {Order, Order} |
+| **Get Id of Order** | orderInstance.Id | `2` |
+| **Find Order by Id** | `Order.Find(2)` | `Order` |
+| **Can make an instance of Vendor object** | `new Vendor()` | typeof(Vendor) = Vendor |
+| **Return given name** | "vendorOne" | "vendorOne" |
+| **Return given description** | "vendor description" | "vendor description" |
+| **Add Order to order list** | `newVendor.AddOrder(Order)` | newVendor.Orders[0] = Order |
+| **Get Order list** | `Vendor.Orders` | {Order, Order} |
+| **Get Id of Vendor** | vendorInstance.Id | `2` |
+| **Find Vendor by Id** | `Vendor.Find(2)` | `Vendor` |
 
 
 ### Tests
 
-Describe:
-Test:
-Expect:
+Describe: MakeOrder()
+Test: Can make an instance of Order object
+Expect: Assert.AreEqual(typeof(Order), newOrder.GetType())
+
+Describe: ReturnTitle()
+Test: Return given title
+Expect: Assert.AreEqual("orderOne", newOrder.Title)
+
+Describe: ReturnOrderDescription()
+Test: Return given description
+Expect: Assert.AreEqual("description", newOrder.Description)
+
+Describe: ReturnPrice()
+Test: Return given price
+Expect: Assert.AreEqual(`12`, newOrder.Price)
+
+Describe: ReturnDate()
+Test: Return given date
+Expect: Assert.AreEqual("December 18 2020", newOrder.Date)
+
+Describe: OrderGetAll()
+Test: Get all instances of Order
+Expect: Assert.AreEqual({Order, Order, Order}, Order.GetAll())
+
+Describe: OrderGetId()
+Test: Get Id of Order
+Expect: Assert.AreEqual(1, newOrder.Id)
+
+Describe: FindOrder()
+Test: Find Order by Id
+Expect: Assert.AreEqual(Order, Order.Find(2))
+
+Describe: MakeVendor()
+Test: Can make an instance of Vendor object
+Expect: Assert.AreEqual(typeof(Vendor, newVendor.GetType()))
+
+Describe: ReturnName()
+Test: Return given name
+Expect: Assert.AreEqual("vendor", newVendor.Name)
+
+Describe: ReturnVendorDescription()
+Test: Return given description
+Expect: Assert.AreEqual("description", newVendor.Description)
+
+Describe: VendorAddOrder()
+Test: Add Order to order list
+Expect: Assert.AreEqual(Order, newVendor.Orders[0])
+
+Describe: GetOrders()
+Test: Get Order list
+Expect: Assert.AreEqual({Order, Order}, newVendor.GetOrders())
+
+Describe: VendorGetId()
+Test: Get Id of Vendor
+Expect: Assert.AreEqual(2, newVendor.Id)
+
+Describe: FindVendor()
+Test: Find Vendor by Id
+Expect: Assert.AreEqual(Vendor, Vendor.Find(2))
 
 ## Bugs / Issues
 
