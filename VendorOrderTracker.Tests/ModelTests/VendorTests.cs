@@ -75,7 +75,7 @@ namespace VendorOrderTracker.Tests
       Vendor newVendor = new Vendor("name", "description");
       Vendor newVendorTwo = new Vendor("name", "description");
 
-      List<Vendor> vendorList = new List<Vendor> {newVendor};//, newVendorTwo};
+      List<Vendor> vendorList = new List<Vendor> {newVendor, newVendorTwo};
 
       CollectionAssert.AreEqual(vendorList, Vendor.GetAll());
     }
