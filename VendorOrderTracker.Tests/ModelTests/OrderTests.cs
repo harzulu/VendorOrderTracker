@@ -56,7 +56,7 @@ namespace VendorOrderTracker.Tests
     {
       string testDate = "December 18 2020";
 
-      Order newOrder = new Order("title", "description", 12, "testDate");
+      Order newOrder = new Order("title", "description", 12, testDate);
 
       Assert.AreEqual(testDate, newOrder.Date);
     }
