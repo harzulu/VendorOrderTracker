@@ -66,7 +66,7 @@ namespace VendorOrderTracker.Tests
       newVendor.AddOrder(newOrderTwo);
       newVendor.AddOrder(newOrderThree);
 
-      CollectionAssert.AreEqual(ordersList, newVendor.Name);
+      CollectionAssert.AreEqual(ordersList, newVendor.Orders);
     }
   }
 }
