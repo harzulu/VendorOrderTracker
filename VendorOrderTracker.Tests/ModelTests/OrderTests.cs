@@ -68,7 +68,7 @@ namespace VendorOrderTracker.Tests
       Order newOrderTwo = new Order("title", "description", 12, "date");
       Order newOrderThree = new Order("title", "description", 12, "date");
 
-      List<Order> orderList = new List<Order> {newOrderOne, newOrderTwo};//, newOrderThree};
+      List<Order> orderList = new List<Order> {newOrderOne, newOrderTwo, newOrderThree};
 
       CollectionAssert.AreEqual(orderList, Order.GetAll());
     }
