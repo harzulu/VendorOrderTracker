@@ -20,6 +20,11 @@ namespace VendorOrderTracker.Models
       Id = _instances.Count;
     }
 
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
+
     public static void ClearAll()
     {
       _instances.Clear();
