@@ -87,7 +87,7 @@ namespace VendorOrderTracker.Tests
       Order newOrderOne = new Order("titleOne", "description", 12, "date");
       Order newOrderTwo = new Order("titleTwo", "description", 12, "date");
 
-      Assert.AreEqual(newOrderTwo, Order.Find(1));
+      Assert.AreEqual(newOrderTwo, Order.Find(2));
     }
   }
 }
