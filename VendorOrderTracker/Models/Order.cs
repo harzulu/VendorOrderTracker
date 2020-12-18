@@ -16,7 +16,7 @@ namespace VendorOrderTracker.Models
   {
     Title = title;
     Description = description;
-    price = price;
+    Price = price;
     Date = date;
     _instances.Add(this);
     Id = _instances.Count;
