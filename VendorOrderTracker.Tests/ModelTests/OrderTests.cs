@@ -60,5 +60,17 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(testDate, newOrder.Date);
     }
+
+    [TestMethod]
+    public void OrderGetAll_GetAllInstancesOfOrder_List()
+    {
+      Order newOrderOne = new Order("title", "description", 12, "date");
+      Order newOrderTwo = new Order("title", "description", 12, "date");
+      Order newOrderThree = new Order("title", "description", 12, "date");
+
+      List<Order> orderList = new List<Order> {newOrderOne, newOrderTwo};//, newOrderThree};
+
+      CollectionAssert.AreEqual(orderList, Order.GetAll());
+    }
   }
 }
