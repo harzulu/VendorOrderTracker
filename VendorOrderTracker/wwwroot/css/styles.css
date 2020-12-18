@@ -1,0 +1,18 @@
+body{
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  background-image: url("https://www.bakingbusiness.com/ext/resources/2019/8/08192019/GlobalTrends.jpg?1566494557");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#info{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.850);
+  border: 2px solid black;
+}
