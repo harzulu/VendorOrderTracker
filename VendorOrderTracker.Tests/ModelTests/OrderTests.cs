@@ -20,5 +20,15 @@ namespace VendorOrderTracker.Tests
       //string test = "string";
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+
+    [TestMethod]
+    public void GetTitle_ReturnTheGivenTitle_String()
+    {
+      string title = "TestTitle";
+
+      Order newOrder = new Order("title", "description", 12, "date");
+
+      Assert.AreEqual(title, newOrder.Title);
+    }
   }
 }
