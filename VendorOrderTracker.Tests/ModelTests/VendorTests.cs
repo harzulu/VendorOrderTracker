@@ -68,5 +68,14 @@ namespace VendorOrderTracker.Tests
 
       CollectionAssert.AreEqual(ordersList, newVendor.Orders);
     }
+
+    [TestMethod]
+    public void GetId_ReturnIdOfVendor_Int()
+    {
+      Vendor newVendor = new Vendor("name", "description");
+      Vendor newVendorTwo = new Vendor("name", "description");
+
+      Assert.AreEqual(2, newVendor.Id);
+    }
   }
 }
