@@ -1,7 +1,7 @@
-/*using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using VendorOrderTracker.Models;
 
-namespace VendorOrderTracker : Controller
+namespace VendorOrderTracker.Controllers
 {
   public class HomeController : Controller
   {
@@ -11,4 +11,4 @@ namespace VendorOrderTracker : Controller
       return View();
     }
   }
-}*/
+}
