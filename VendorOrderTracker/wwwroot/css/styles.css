@@ -2,6 +2,7 @@ body{
   margin-left: 20%;
   margin-right: 20%;
   text-align: center;
+  list-style-position: inside;
   background-image: url("https://media.giphy.com/media/3ohs80Pl2l4nHKbKXm/giphy.gif");
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,8 +10,8 @@ body{
 }
 
 #info{
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 10%;
   padding: 5%;
   text-align: center;
@@ -21,4 +22,8 @@ body{
 
 a{
   color: #44966E;
+}
+
+h1{
+  font-weight: bold;
 }
