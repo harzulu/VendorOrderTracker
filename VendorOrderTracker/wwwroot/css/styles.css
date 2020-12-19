@@ -15,7 +15,8 @@ body{
   padding: 5%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.850);
-  border: 4px solid black;
+  border: 8px solid #61473D;
+  color: #61473D;
 }
 
 a{
